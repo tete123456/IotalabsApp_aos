@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.lotalabsappui"
+    android:theme="@style/Theme.AppCompat.NoActionBar">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name="com.iotalabs.geoar.Location_All"
+        android:allowBackup="true"
+        android:icon="@mipmap/iotalabs_app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LotalabsAppUi"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.iotalabs.geoar.AR_Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.iotalabs.geoar.ReadQRActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iotalabs.geoar.MyNameActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAjdupBJp0BXIPkumIGNrbYwF5ubaE2RR4" />
+
+        <activity
+            android:name="com.iotalabs.geoar.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+        <activity
+            android:name="com.iotalabs.geoar.CreateQR"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.iotalabs.geoar.IntroActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.iotalabs.geoar.MyFirebaseMessagingService"
+            android:exported="false"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.iotalabs.geoar.BackgroundLocationUpdateService" />
+    </application>
+
+</manifest>

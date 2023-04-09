@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:iconSpaceReserved="false">
+    <PreferenceCategory
+        android:title="위치 설정"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_baseline_pin_drop_24"
+            android:key="key_me"
+            android:title="내위치 on/off" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_baseline_person_pin_circle_60"
+            android:key="key_friend"
+            android:title="친구위치 on/off" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_baseline_groups_24"
+            android:key="key_add_hitt"
+            android:summary="밀집도 끄고 켜기"
+            android:title="히트맵 on/off" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="백그라운드 서비스"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:icon="@drawable/ic_baseline_explore_off_606060"
+            app:key="exit"
+            app:title="어플 종료"
+            android:summary="종료시 백그라운드 서비스를 이용할 수 없습니다.">
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

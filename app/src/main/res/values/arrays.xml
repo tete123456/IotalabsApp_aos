@@ -1,0 +1,23 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+    <string-array name="action_meter">
+        <item name="100">100m</item>
+        <item>500m</item>
+        <item>1km</item>
+        <item>3km</item>
+    </string-array>
+    <string-array name="action_values">
+        <item name="fm">가족</item>
+        <item name="fr">친구</item>
+        <item name="sol">안함</item>
+    </string-array>
+</resources>
